@@ -29,9 +29,19 @@ public class stepDefBasicCalculator {
     public void the_calculator_shows_the_right_result() {
         BasicCalculator.checkSumOperation();
     }
-    @After()
-    public void close(){
-        driver.close();
+
+
+    @Given("probemos el antes")
+    public void probemosElAntes() {
+        System.out.println("despues de la prueba");
     }
 
+    @When("probemos el durante")
+    public void probemosElDurante() {
+        System.out.println("despues de la prueba");
+    }
+
+    @Then("probemos el final")
+    public void probemosElFinal() {
+        System.out.println("despues de la prueba");    }
 }

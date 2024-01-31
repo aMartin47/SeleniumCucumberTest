@@ -1,5 +1,6 @@
 package stepDef;
 
+import io.cucumber.java.After;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
@@ -14,21 +15,15 @@ public class stepDefNumberGame {
         driver.get("https://testsheepnz.github.io/index.html#page-top");
         BasePage.goNumberGame();
     }
-    @When("start the game")
-    public void start_the_game() {
-        // Write code here that turns the phrase above into concrete actions
-        throw new io.cucumber.java.PendingException();
+    @When("start the game with {string} options")
+    public void startTheGameWithOptions(String arg0) throws InterruptedException {
+        NumberGame.optionsGame(arg0);
     }
-    @And("try to guess the result")
-    public void try_to_guess_the_result() {
-        // Write code here that turns the phrase above into concrete actions
-        throw new io.cucumber.java.PendingException();
+    @Then("try to guess the result and get the number right in x tries")
+    public void try_to_guess_the_result_and_get_the_number_right_in_x_tries() {
+        NumberGame.tryGuess();
     }
-    @Then("get the number right in x tries")
-    public void get_the_number_right_in_x_tries() {
-        // Write code here that turns the phrase above into concrete actions
-        throw new io.cucumber.java.PendingException();
-    }
+
 
 
 }
